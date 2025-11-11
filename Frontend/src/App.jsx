@@ -1,0 +1,103 @@
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Navbar from './components/Navbar';
+import Login from './components/Login';
+import SignupMail from './components/SignupMail';
+import SignupAcnt from './components/SignupAcnt';
+import ForgotPassword from './components/ForgotPassword';
+import OtpPage from './components/OtpPage';
+import Resetpassword from './components/Resetpassword';
+import MainPage from './components/MainPage';
+import Contribute from './components/Contribute';
+import UpdatePassword from './components/UpdatePassword';
+import HomePage from './components/HomePage';
+import Faq from './components/Faq';
+import ContactUs from './components/ContactUs';
+import Curriculum from './components/Curriculum';
+import AboutUs from './components/AboutUs';
+import MyContributions from './components/MyContributions';
+import ProtectedRoutes from './components/ProtectedRoutes';
+import ViewProfile from './components/ViewProfile';
+import RegisterRoutes from './components/RegisterRoutes';
+import userService from './services/userService'
+import { UserProvider } from './contexts/userContext';
+import Footer from './components/Footer';
+
+function App() {
+  useEffect(() => {
+    const reDirectLogin = async () => {
+      if (window.location.pathname === '/login') return;
+      const tokenInLocalStorage = localStorage.getItem('atlasToken');
+      const tokenInSessionStorage = sessionStorage.getItem('atlasToken');
+
+      if (!tokenInLocalStorage && !tokenInSessionStorage) {
+        window.location.href = "/login";
+      } else {
+        try {
+          const token = tokenInLocalStorage || tokenInSessionStorage;
+          const response = await userService.validateToken(token);
+          const success = response.data.success;
+          if (!success) {
+            localStorage.clear();
+            sessionStorage.clear();
+            window.location.href = "/login";
+          }
+        } catch (err) {
+          console.log(err);
+          localStorage.clear();
+          sessionStorage.clear();
+          window.location.href = "/login";
+        }
+      }
+    }
+    window.addEventListener('load', reDirectLogin);
+    return () => {
+      window.removeEventListener('load', reDirectLogin);
+    };
+  }, []);
+  return (
+    <BrowserRouter>
+      <UserProvider>
+        <Navbar />
+        <div style={{minHeight: "82vh"}}>
+        <Routes>
+
+          {/* only to new users*/}
+          <Route element={<RegisterRoutes />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signupmail" element={<SignupMail />} />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
+          </Route>
+
+          {/* handled inline */}
+          <Route path="/signupacnt" element={<SignupAcnt />} />
+          <Route path="/verifyotp" element={<OtpPage />} />
+          <Route path="/resetpassword" element={<Resetpassword />} />
+
+          {/* only to logged in users */}
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/main" element={<MainPage />} />
+            <Route path="/updatePassword" element={<UpdatePassword />} />
+            <Route path="/contribute" element={<Contribute />} />
+            <Route path="/myContributions" element={<MyContributions />} />
+            <Route path="/viewProfile" element={<ViewProfile />} />
+          </Route>
+
+          {/*Access to all*/}
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/curriculum" element={<Curriculum />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+
+
+
+        </Routes>
+        </div>
+        <Footer />
+      </UserProvider>
+    </BrowserRouter>
+  );
+}
+export default App;

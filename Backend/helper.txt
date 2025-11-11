@@ -1,0 +1,42 @@
+note:- all are doing only once in postman api testing platefrom to add nessasary detail for running this website
+
+1. for adding email domain url is http://localhost:4000/api/auth/add-domain with email and allow all email with same domain
+
+2. for adding course and branch got to url http://localhost:4000/api/track/addBranch and http://localhost:4000/api/track/addCourse with branch and course json data
+
+3. first set env file for running this website
+example of env file code 
+'''
+
+MONGODB_URI=mongodb://localhost:27017/
+PORT=4000
+
+# Server Config
+SERVER_URL=http://localhost:5000
+
+ADMIN_MAIL=sacoder3@gmail.com
+MAIL_PASSWORD=kjkj kjhj jklj lkjh
+
+JWT_SECRET=mySuperSecrezjjdf123jgvlknzd
+VERIFICATION_SECRET=myEmailVerificationSecret456mnkjh
+
+
+
+# Google Drive Config 
+GOOGLE_DRIVE_FOLDER_ID=jkbflkbluszhubgxucnv
+
+GOOGLE_CLIENT_ID=yourcode.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=secretcode
+GOOGLE_REDIRECT_URI=http://localhost:4000/oauth2callback
+UPLOAD_DIR=uploads
+
+# for this go on drive
+GOOGLE_DRIVE_FOLDER_ID=1khkhbj
+
+# for this run get-token.js fine and generate if not know ask with chatgpt
+GOOGLE_REFRESH_TOKEN=1//ljbnljbjbj
+
+'''
+
+
+

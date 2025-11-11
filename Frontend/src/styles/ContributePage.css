@@ -1,0 +1,94 @@
+.contribute-container {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 7px 2px;
+    margin: 20px auto;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 18px;
+    width: 90vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border: 10px solid white;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.contribute-header {
+    background-color: #290BEA;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    padding: 12px;
+    font-size: 1.39em;
+    font-family: 'monserrat', sans-serif;
+    border-radius: 12px;
+    width:100%;
+    box-sizing: border-box;    
+}
+.contribute-content {
+    width: 90vw;
+    background-color: white;
+    margin: 15px auto;
+    border-radius: 12px;
+    padding: 15px 10px;
+    font-weight:700;
+    text-align: center;
+}
+
+.contributequestion{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 7px;
+    color:#290BEA;
+    padding: 0 10px;
+}
+
+#contribution-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#contribution-form label{
+    font-size: 17px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    
+}
+
+#contribution-form input[type="file"]{
+    text-align: center;
+    margin:0px auto;
+}
+
+#contribution-form input{
+    width: 308px; 
+    border-radius: 10px;
+    padding: 7px 13px;
+    margin: 3px 3px;
+    margin-bottom: 7px;
+    font-size: 1.1em;  
+    box-sizing: border-box;
+}
+
+#contribution-form select {
+    width: 300px; 
+    border-radius: 10px;
+    padding: 7px 13px;
+    margin: 3px 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.1em; 
+    margin-bottom: 10px;
+}
+
+.contribution-btn-container { 
+    width:50%;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 9px;
+}
+
+#contribution-form button:hover {
+    background-color: #290BEA;
+}
