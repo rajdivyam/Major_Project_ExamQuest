@@ -7,7 +7,7 @@ export default function Curriculum() {
         <div className="curriculum-page">
             <h1>Curriculum</h1>
             <div className="curriculum-card">
-                <p>Want to explore regulations and syllabus of respective branches and courses? <a href="https://www.kiet.edu/syllabus">Click</a></p>
+                <p>Want to explore regulations and syllabus of respective branches and courses? <a href="https://www.kiet.edu/autonomy-kiet">Click</a></p>
             </div>
         </div>
     );

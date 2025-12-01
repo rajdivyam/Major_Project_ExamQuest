@@ -10,8 +10,8 @@ export default function ContactUs() {
             <div className="contact-card">
                 <h2>Have any Queries/suggestions?</h2>
                 <p>Please feel free to reach out to us at:</p>
-                <a href="rajdivyamgautam@gmail.com" className="contact-email">rajdivyamgautam@gmail.com</a>
-                <a href="rajdivyamgautam@gmail.com" className="contact-button"><GrSend /></a>
+                <a href="divyam.2426mca1749@kiet.edu" className="contact-email">divyam.2426mca1749@kiet.edu</a>
+                <a href="divyam.2426mca1749@kiet.edu" className="contact-button"><GrSend /></a>
             </div>
         </div>
     );

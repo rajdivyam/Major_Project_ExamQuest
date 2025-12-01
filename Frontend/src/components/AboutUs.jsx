@@ -94,7 +94,7 @@ export default function AboutUs() {
                 </section>
                 <section className="solutions">
                     <h2>How Our Website Solves Those Problems</h2>
-                    <p>Our website, ExamQuest, revolutionizes the way KIET students access and utilize academic resources. By centralizing past midterm and endterm papers, course-related projects, and research works, we eliminate the frustration of scattered information. With an intuitive interface, students can effortlessly find and contribute valuable materials, ensuring a continuous flow of knowledge. This not only enhances individual learning but also fosters a culture of collaboration, where students support each other by sharing insights and resources. Our platform transforms academic preparation into a streamlined and enriching experience.</p>
+                    <p>Our website, ExamQuest, revolutionizes the way KIET students access and utilize academic resources. By centralizing past Mid Sem and End Sem papers, course-related projects, and research works, we eliminate the frustration of scattered information. With an intuitive interface, students can effortlessly find and contribute valuable materials, ensuring a continuous flow of knowledge. This not only enhances individual learning but also fosters a culture of collaboration, where students support each other by sharing insights and resources. Our platform transforms academic preparation into a streamlined and enriching experience.</p>
                 </section>
                 <section className="features">
                     <h2>Features</h2>
@@ -117,7 +117,7 @@ export default function AboutUs() {
                         </div>
                     </div>
                 </section>
-                <section className="developers">
+                {/* <section className="developers">
                     <h2>Meet the Contributors</h2>
                     <div className="developers-grid">
                         {
@@ -125,7 +125,31 @@ export default function AboutUs() {
                             developers.map(developer => <DeveloperItem key={developer._id} developer={developer} />)
                         }
                     </div>
-                </section>
+                </section>  */}
+
+                <section className="developers">
+    <h2>Meet the Contributors</h2>
+
+    <div className="simple-contributors">
+        <div className="contributor">
+            <img src="\Images\user1.jpg" alt="Divyam Raj" />
+            <h3>Divyam Raj</h3>
+        </div>
+
+        <div className="contributor">
+            <img src="\Images\user2.png" alt="Developer 2" />
+            <h3>Divakar Verma</h3>
+        </div>
+
+        <div className="contributor">
+            <img src="\Images\user3.png" alt="Developer 3" />
+            <h3>Divyanshu Mishra</h3>
+        </div>
+    </div>
+</section>
+
+
+
                 <section className="reviews">
                     <h2>Reviews and Ratings</h2>
                     <div className="reviews-wrapper">

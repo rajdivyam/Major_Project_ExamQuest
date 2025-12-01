@@ -201,3 +201,47 @@ section h2 {
 .review-item{
     margin-left: 9px;
 }
+
+
+
+
+
+.simple-contributors {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contributor {
+  text-align: center;
+}
+
+.contributor img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #7a76c8;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+.contributor h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a54a3;
+}
+
+
+
+
+.contributor {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contributor:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}

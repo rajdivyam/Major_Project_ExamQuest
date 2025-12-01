@@ -6,10 +6,10 @@ export default function Faq() {
     const faqData = [
         {
             question: "1. I’m having trouble logging in. What should I do?",
-            answer: <>Make sure that you're entering accurate credentials to log in. For KIET students, it is preferred to use your university mail, while others could use their personal mails. If you encounter any issues, please do <Link className='report-link' to="/contactus">contact</Link> us.</>
+            answer: <>Make sure that you're entering accurate credentials to log in. For KIET students, it is preferred to use your College mail ID, while others could use their personal mails. If you encounter any issues, please do <Link className='report-link' to="/contactus">contact</Link> us.</>
         },
         {
-            question: "2. How can I search for specific midterm or endterm papers?",
+            question: "2. How can I search for specific Mid Sem or End Sem papers?",
             answer: <>You can search for specific Mid Sem or End Sem papers by selecting your course and the academic year. Use the search function in the relevant section for quick access. (Note: You are always requested to go through the <Link className='report-link' to="/curriculum">curriculum</Link> for the course codes of subjects to get more clarity)</>
         },
         {
@@ -18,7 +18,7 @@ export default function Faq() {
         },
         {
             question: "4. What types of projects and research works can I share?",
-            answer: "Firstly, for contributing you should be logged in using university mail. As such, you can share any projects or research works that are related to your courses and academics. This helps future students learn from your contributions. Please make sure that for the project contribution you must deploy the project in GitHub because you need to provide the GitHub link for the project."
+            answer: "Firstly, for contributing you should be logged in using College mail ID. As such, you can share any projects or research works that are related to your courses and academics. This helps future students learn from your contributions. Please make sure that for the project contribution you must deploy the project in GitHub because you need to provide the GitHub link for the project."
         },
         {
             question: "5. What should I do if I find incorrect or outdated information?",
@@ -34,7 +34,7 @@ export default function Faq() {
         },
         {
             question: "8. Who can contribute resources to the repository?",
-            answer: "Only KIET students can contribute resources to the repository and they must login through thier university mail. This ensures that the materials are relevant and accurate for the student community."
+            answer: "Only KIET students can contribute resources to the repository and they must login through thier College mail ID. This ensures that the materials are relevant and accurate for the student community."
         },
         {
             question: "9. what should i do if desired course is not available?",
